@@ -37,7 +37,8 @@ module.exports = {
             {
                 test: /\.png$/,
                 loader: 'file-loader'
-            }
+            },
+            { test: /[\/\\]angular\.js$/, loader: "exports?angular" },
         ]
     },
     plugins: [
