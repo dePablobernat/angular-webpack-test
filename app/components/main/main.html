@@ -1,16 +1,20 @@
 <header>
     <h1>{{mainCtrl.applicationName}}</h1>
 </header>
-<section>
-    <div class="image-container">
-        <img src="/images/yeoman.png">
-    </div>
-    <div class="text-container">
-        <h3>Angular ES6 Webpack Application</h3>
-        <p>With a little help from <a href="https://yeoman.io">Yeoman</a></p>
-    </div>
-    <ul class="businessList"
-    ng-repeat="item in $mainCtrl.listing.companies" >
-      <li>{{item.company}}<li>
-  </ul>
+<section class="container">
+    <secion class="business-list">
+        <a
+            href="{{element.company| lowercase}}"
+            ng-repeat="element in mainCtrl.listing.companies">
+            <div
+                class="business-list__block"
+                style="background: url({{element.image}})no-repeat 50% /cover">
+                <section>
+                    <h2>{ {{element.company}} }</h2>
+                    <p>{{element.description | limitTo:70 }} ...</p>
+                </section>
+                <span>}</span>
+            </div>
+        </a>
+    </section>
 </section>

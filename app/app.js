@@ -3,9 +3,9 @@ import angular from 'angular';
 import 'angular-resource';
 import 'angular-ui-router';
 import 'angular-sanitize';
+import 'styles.scss';
 
 import 'services/services';
-import 'services/listing';
 import 'directives/directives';
 import 'services/version-service';
 
